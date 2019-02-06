@@ -469,6 +469,17 @@ a {
             box-sizing: border-box;
 }
 
+.next-row {
+    display: block !important;
+}
+
+@media (min-width: 530px) {
+
+.next-row {
+        display: inline-block !important
+}
+    }
+
 .large-hero {
     border-bottom: 10px solid #2f5572;
     position: relative;
@@ -577,9 +588,8 @@ a {
         max-width: 976px;
     }
 
-.wrapper .wrapper {
-        padding-left: 0;
-        padding-right: 0;
+.wrapper--narrow {
+        max-width: 470px;
     }
 
 .wrapper--b-margin {
@@ -882,6 +892,11 @@ a {
 
 .section-title--blue {
         color: #2f5572;
+    }
+
+.section-title--less-margin {
+        margin-bottom: 1.3rem;
+        margin-top: 0;
     }
 
 .section-title__icon {
@@ -1356,3 +1371,88 @@ a {
         -webkit-transform: scale(1);
                 transform: scale(1);
     }
+
+.modal {
+    background-color: rgba(255, 255, 255, .94);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    visibility: hidden;
+    z-index: 5;
+}
+
+.modal--is-visible {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        visibility: visible;
+    }
+
+.modal__inner {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 100%;
+    }
+
+.modal__description {
+        line-height: 1.65;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+
+.modal__close {
+        color: #2f5572;
+        font-size: 2rem;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        -webkit-transform: scaleX(1.2);
+                transform: scaleX(1.2);
+        -webkit-transform-origin: 100% 0;
+                transform-origin: 100% 0;
+    }
+
+.modal__close:hover {
+            color: #d59541;
+            cursor: pointer;
+        }
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons__icon {
+        background-color: #d59541;
+        display: inline-block;
+        margin: 0 5px 5px 5px;
+        width: 33%;
+        height: 72px;
+        position: relative;
+    }
+
+@media (min-width: 530px) {
+
+.social-icons__icon {
+            margin: 0 5px;
+            width: 72px
+    }
+    }
+
+.social-icons__icon .icon {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+        }

@@ -15,3 +15,10 @@ a {
 * {
     box-sizing: border-box;
 }
+
+.next-row {
+    display: block !important;
+    @mixin atSmall {
+        display: inline-block !important;
+    }
+}
